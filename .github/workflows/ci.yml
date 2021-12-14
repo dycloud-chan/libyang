@@ -24,7 +24,6 @@ jobs:
             export GIT_BRANCH=${{ github.base_ref }}
           fi
           echo "::set-output name=branch-name::$GIT_BRANCH"
-          echo $GIT_BRANCH ${{ github.branch-name }}
   build:
     name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
